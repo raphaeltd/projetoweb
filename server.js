@@ -1,6 +1,8 @@
 // BASE SETUP
 // =============================================================================
 
+var debug = require('debug')('server:rote');
+
 
 
 // call the packages we need
@@ -95,7 +97,8 @@ router.get('/carteiras', function(req, res) {
       } ).then( function( results ) {
           res.json(results);
       }, function( err ) {
-          console.log( "ERRO no TSCOBRA Operadores:", err );
+          //console.log( "ERRO no TSCOBRA Operadores:", err );
+          debug( "ERRO no TSCOBRA Operadores:", err );
       } );
   
 });
@@ -158,8 +161,11 @@ router.get('/contratosporcarteiras', function(req, res) {
 
       } ).then( function( results ) {
           res.json(results);
+          debug( "Executou tabela teste_gerencial");
+
       }, function( err ) {
-          console.log( "ERRO no TSCOBRA Operadores:", err );
+          //console.log( "ERRO no TSCOBRA Operadores:", err );
+          debug( "ERRO no TSCOBRA Operadores:", err );
       } );
   
 });
@@ -172,4 +178,4 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Servidor TSCOBRA no ar na porta: ' + port);
+console.log('Servidor TS-Cobra no ar na porta: ' + port);
