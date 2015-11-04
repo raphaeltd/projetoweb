@@ -1,0 +1,9 @@
+{
+
+	"user": "sa",
+	"password": "freicaneca",
+	"server": "10.0.0.31",
+	"port": 1433,
+	"database": "tesis_gerencial"
+
+}
