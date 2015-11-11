@@ -1,4 +1,4 @@
-//@file dragons.js
+//@file Route: routes/index.js
 
 var express = require('express');
 var router = express.Router();
@@ -10,7 +10,10 @@ router.get('/', function(request, response){
 });
 
 
-router.use('/gerencial', require('./gerencial'));
+// router.use('/gerencial', require('./gerencial'));
+
+router.use('/gerencial/contratos', require('./gerencial/contratos.por.carteira'));
+router.use('/gerencial/acionamentos', require('./gerencial/acionamentos.por.carteira'));
 
 
 module.exports = router;

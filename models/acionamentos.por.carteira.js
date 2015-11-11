@@ -1,3 +1,4 @@
+//@file Model: models/gerencial/acionamentos.por.carteira.js
 
 var debug = require('debug')('gerencial:model');
 var config = require('config');
@@ -14,7 +15,7 @@ var GerencialModel = {
 		    
 		    var request = new sql.Request(connection); // or: var request = connection.request(); 
 
-		    request.query('select * from teste_gerencial', function(err, recordset) {
+				request.query('select c.*, e.nom_abrev,f.dsc_faixa, g.nom_grupo from teste_carteira as c inner join empresas as e on e.id_cgc_empresa = c.id_cgc_empresa inner join faixas_de_atraso as f on f.id_faixa = c.id_faixa inner join grupos_financeiros as g on g.id_grupo = c.id_grupo', function(err, recordset) {
 		        
 				callback(err, recordset);
 
