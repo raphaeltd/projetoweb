@@ -30,6 +30,17 @@ var ContratosController = {
 
 	}
 
+	// findId: function(request, response, next){
+
+	// 	ContratosModel.findIdAsync({})
+	// 		.then(function(data){
+	// 		response.json(data);
+
+	// 	})
+	// 		.catch(next);
+
+	// }
+
 };
 
 module.exports = ContratosController;

@@ -9,6 +9,7 @@ var debug = require('debug')('gerencial:controller');
 debug("Rota... gerencial");
 
 router.get('/', GerencialContratosController.find);
+// router.get('/:_id', GerencialContratosController.findId);
 
 
 module.exports = router;

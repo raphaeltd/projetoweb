@@ -3,6 +3,7 @@
 	"user": "sa",
 	"password": "freicaneca",
 	"server": "10.0.0.31",
+	// 177.68.158.112
 	"port": 1433,
 	"database": "tesis_gerencial"
 
