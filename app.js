@@ -38,6 +38,9 @@ app.use(function(request, response, next){
 	}
 });
 
+var cors = require('cors');
+app.use(cors());
+
 //router
 app.use('/', require('./routes'));
 
