@@ -14,8 +14,15 @@ var GerencialModel = {
 		var connection = new sql.Connection(config, function(err) {
 		    
 		    var request = new sql.Request(connection); // or: var request = connection.request(); 
+			var stringQuery = "";
 
-				request.query('select c.*, e.nom_abrev,f.dsc_faixa, g.nom_grupo from teste_carteira as c inner join empresas as e on e.id_cgc_empresa = c.id_cgc_empresa inner join faixas_de_atraso as f on f.id_faixa = c.id_faixa inner join grupos_financeiros as g on g.id_grupo = c.id_grupo', function(err, recordset) {
+				stringQuery = "select c.*, e.nom_abrev,f.dsc_faixa, g.nom_grupo, ct.dsc_cart_empresa from posicao_diaria_acionamentos_por_empresa as c";
+				stringQuery = stringQuery + " inner join empresas as e on e.id_cgc_empresa = c.id_cgc_empresa";
+				stringQuery = stringQuery + " inner join carteiras as ct on ct.id_Carteira = c.id_Carteira and ct.id_cgc_empresa = c.id_cgc_empresa";
+				stringQuery = stringQuery + " inner join faixas_de_atraso as f on f.id_faixa = c.id_faixa";
+				stringQuery = stringQuery + " inner join grupos_financeiros as g on g.id_grupo = c.id_grupo";
+				
+				request.query(stringQuery, function(err, recordset) {
 		        
 				callback(err, recordset);
 
