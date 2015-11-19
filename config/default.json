@@ -1,9 +1,16 @@
 {
 
+	// "user": "sa",
+	// "password": "freicaneca",
+	// "server": "10.0.0.31",
+	// tscobra 177.68.158.112
+	
+
 	"user": "sa",
-	"password": "freicaneca",
-	"server": "10.0.0.31",
-	// 177.68.158.112
+	"password": "%ferraz%1234%",
+	"server": "189.112.155.194",
+
+
 	"port": 1433,
 	"database": "tesis_gerencial"
 
