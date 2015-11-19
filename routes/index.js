@@ -14,6 +14,7 @@ router.get('/', function(request, response){
 
 router.use('/gerencial/contratos', require('./gerencial/contratos.por.carteira'));
 router.use('/gerencial/acionamentos', require('./gerencial/acionamentos.por.carteira'));
+router.use('/gerencial/acionamentos/teste', require('./gerencial/acionamentos.por.carteira.teste'));
 
 
 module.exports = router;
